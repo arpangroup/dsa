@@ -28,8 +28,8 @@ public class Graph<T> {
     }
 
 
-    public void addEdge(T source, T destination) {
-        adjList.get(source).add(destination);
+    public void addEdge(T src, T destination) {
+        adjList.get(src).add(destination);
     }
 
     public void removeVertex(T vertex) {
@@ -41,11 +41,11 @@ public class Graph<T> {
         }
     }
 
-    public void removeEdge(T source, T destination) {
+    public void removeEdge(T src, T destination) {
         if (isDirectedGraph) {
-            adjList.get(source).remove(destination);
+            adjList.get(src).remove(destination);
         } else {
-            adjList.get(destination).remove(source);
+            adjList.get(destination).remove(src);
         }
 
     }
@@ -73,14 +73,14 @@ public class Graph<T> {
         }
     }
 
-    public void dfsUsingRecursion(T source) {
-       System.out.println(source);
-       getNeighbours(source).forEach(this::dfsUsingRecursion);
+    public void dfsUsingRecursion(T src) {
+       System.out.println(src);
+       getNeighbours(src).forEach(this::dfsUsingRecursion);
     }
 
-    public void bfs(T source) {
+    public void bfs(T src) {
         Queue<T> queue = new ArrayDeque<>();
-        queue.add(source);
+        queue.add(src);
 
         while (!queue.isEmpty()) {
             T current = queue.remove();
@@ -88,4 +88,70 @@ public class Graph<T> {
             queue.addAll(getNeighbours(current));
         }
     }
+
+    public boolean hasPath(T src, T destination) {
+        if (src.equals(destination)) return true;
+        boolean isPathFound = false;
+
+        for (T neighbour : getNeighbours(src)) {
+            if (hasPath(neighbour, destination)) {
+                isPathFound =  true;
+                break;
+            }
+        }
+        return isPathFound;
+    }
+
+    public boolean hasPathUsingBFS(T src, T destination) {
+        if (src.equals(destination)) return true;
+
+        Queue<T> q = new ArrayDeque<>();
+        q.add(src);
+
+        while (!q.isEmpty()) {
+            T current = q.poll();
+            if (current.equals(destination)) {
+                return true;
+            } else {
+                for (T neighbour : getNeighbours(current)) {
+                    q.add(neighbour);
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    void printPath(T source, T destination) {
+        List<T> path = new ArrayList<>();
+        Set<T> visited = new HashSet<>();
+        printPathHelper(source, destination, path, visited);
+    }
+
+    private void printPathHelper(T current, T destination, List<T> path, Set<T> visited) {
+        path.add(current);
+        visited.add(current);
+
+        if (current.equals(destination)) {
+            System.out.println(path);
+        } else {
+            for (T neighbor : getNeighbours(current)) {
+                if (!visited.contains(neighbor)) {
+                    printPathHelper(neighbor, destination, path, visited);
+                }
+            }
+        }
+
+        path.remove(path.size() - 1);
+        visited.remove(current);
+    }
+
+    public boolean hasCycle(T source) {
+        return false;
+    }
+
+
+
+
 }
