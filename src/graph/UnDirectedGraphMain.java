@@ -12,9 +12,15 @@ public class UnDirectedGraphMain {
                 List.of("k", "l"),
                 List.of("o", "n")
         );
-        UnDirectedGraph graph = new UnDirectedGraph();
+        UnDirectedGraph<String> graph = new UnDirectedGraph<>();
         graph.buildGraph(edges);
-
         graph.printGraph();
+
+        /*System.out.println("Removing vertex : " + "k");
+        graph.removeVertex("k");
+        graph.printGraph();*/
+
+        System.out.println("###################");
+        System.out.println(graph.hasPath("i", "l"));
     }
 }

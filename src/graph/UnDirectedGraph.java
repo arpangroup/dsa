@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UnDirectedGraph<T> {
     private Map<T, List<T>> graph;
@@ -44,7 +41,11 @@ public class UnDirectedGraph<T> {
     }
 
     public List<T> getNeighbours(T vertex) {
-        return graph.get(vertex);
+        List<T> neighbours = new ArrayList<>();
+        if (graph.containsKey(vertex)) {
+            neighbours = graph.get(vertex);
+        }
+        return neighbours;
     }
 
 
@@ -72,9 +73,33 @@ public class UnDirectedGraph<T> {
     }
 
 
-    public boolean hasPath(T src, T destination) {
+    public boolean hasPath(T src, T dst) {
+       return hasPathHelper(src, dst, new HashSet<>(), new ArrayList<>());
+    }
+
+    private boolean hasPathHelper(T curr, T dst, Set<T> visited, List<T> path) {
+        if (visited.contains(curr)) {
+            return false; // if already  visited, no need to traverse to avoid infinite recursion
+        }
+
+        visited.add(curr);
+        path.add(curr);
+
+        if (curr.equals(dst)) {
+            System.out.println(path);
+            return true;
+        }
+
+
+        for (T neighbour : getNeighbours(curr)) {
+            if (hasPathHelper(neighbour, dst, visited, path)) return true; // Return immediately when path is found
+        }
+
+
+        path.removeLast(); // Backtrack only when no path is found
         return false;
     }
+
 
 
     public void printPath(T source, T destination) {

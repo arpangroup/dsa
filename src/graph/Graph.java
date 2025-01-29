@@ -6,15 +6,15 @@ import java.util.Map;
 
 public interface Graph<T> {
     void addVertex(T vertex);
-    void add(T source, List<T> destinations);
-    void addEdge(T src, T destination);
+    void add(T src, List<T> dst);
+    void addEdge(T src, T dst);
     void removeVertex(T vertex);
-    void removeEdge(T src, T destination);
+    void removeEdge(T src, T dst);
     List<T> getNeighbours(T vertex);
     void printGraph();
     boolean hasCycle();
     void dfs(T root);
     void bfs(T src);
-    boolean hasPath(T src, T destination);
-    void printPath(T source, T destination);
+    boolean hasPath(T src, T dst);
+    void printPath(T src, T dst);
 }
