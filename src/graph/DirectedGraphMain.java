@@ -1,11 +1,10 @@
 package graph;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class GraphMain {
+public class DirectedGraphMain {
     public static void main(String[] args) {
-        Graph<String> graph = new Graph<>();
+        Graph<String> graph = new DirectedGraph<>();
         graph.add("a", List.of("b", "c"));
         graph.add("b", List.of("d"));
         graph.add("c", List.of("e"));
