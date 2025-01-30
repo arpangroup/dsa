@@ -18,6 +18,12 @@ public class UnDirectedGraph<T> {
         }
     }
 
+    public void buildGraph(T[][] edges) {
+        for (T[] edge : edges) {
+            this.addEdge(edge[0], edge[1]);
+        }
+    }
+
     public void addEdge(T node1, T node2) {
         // if a node is not in graph, add it
         if (!graph.containsKey(node1)) graph.put(node1, new ArrayList<>());
