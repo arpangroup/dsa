@@ -26,7 +26,20 @@ public class DirectedGraph<T> implements Graph<T>{
 
     @Override
     public void addEdge(T src, T destination) {
-        graph.get(src).add(destination);
+        if (graph.containsKey(src)) {
+            graph.get(src).add(destination);
+        } else {
+            graph.put(src, new ArrayList<>());
+            graph.get(src).add(destination);
+        }
+    }
+
+    public void addEdges(T[][] edges) {
+        for (T[] edge : edges) {
+            T u = edge[0];
+            T v = edge[1];
+            this.addEdge(u, v);
+        }
     }
 
     @Override
@@ -52,6 +65,10 @@ public class DirectedGraph<T> implements Graph<T>{
     @Override
     public List<T> getNeighbours(T vertex) {
         return graph.get(vertex);
+    }
+
+    public Map<T, List<T>> getGraph() {
+        return graph;
     }
 
     @Override

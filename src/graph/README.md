@@ -37,3 +37,7 @@ For above diagram n = 7,
 ````java
 adj[n+1][n+1]
 ````
+
+
+## Topological Sort:
+![topological_sort.png](../../resources/topological_sort.png)
