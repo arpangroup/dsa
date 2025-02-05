@@ -41,3 +41,28 @@ adj[n+1][n+1]
 
 ## Topological Sort:
 ![topological_sort.png](../../resources/topological_sort.png)
+
+
+## Q: Is tracking the parent node necessary for cycle detection in an undirected graph, or is the visited set alone sufficient?
+The **parent node check is necessary** to distinguish between a genuine cycle and a backtracking revisit.
+
+The **visited set** alone is insufficient because:
+
+### 1. False Positives Without Parent Check:
+- If a node v is visited again, it could be due to a back edge (a cycle) or simply because v was visited from its neighbor (its parent in DFS).
+- Without tracking the **parent**, we might incorrectly detect a cycle when encountering a previously visited node that is actually just the DFS parent.
+
+### 2. Example of Incorrect Detection Without Parent:
+Consider this undirected graph:
+````lua
+   1 -- 2
+   |  
+   3
+````
+- DFS from `1`: Mark `1` as visited → Visit `2` → Mark `2` as visited.
+- Backtrack and visit `3` from `1`. Mark `3` as visited.
+- When `3` sees `1` again, if we only check `visited`, we might think it's a cycle, but it's just the parent.
+
+### 3. Correct Detection With Parent:
+- If `v` is visited and is **not the parent** of the current node, it means there's a back edge, forming a cycle.
+- Otherwise, if `v` is the parent, it’s just part of the DFS traversal, not a cycle.
