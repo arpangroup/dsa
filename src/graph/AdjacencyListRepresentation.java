@@ -34,7 +34,6 @@ public class AdjacencyListRepresentation {
 
     private void dfs(ArrayList<ArrayList<Integer>> adj, Integer src, Set<Integer> visited, ArrayList<Integer> path) {
         if(visited.contains(src)) return;
-        if(adj == null || adj.isEmpty()) return;
 
         visited.add(src);
         path.add(src);
