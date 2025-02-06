@@ -51,13 +51,13 @@ public class DFSTraversal {
         }
     }
 
-    public static List<List<Integer>> allPossibleDfsPath(List<List<Integer>> graph) {
+    public static List<List<Integer>> allPossibleDfsPath(List<List<Integer>> graph, int src) {
         Set<Integer> visited = new HashSet<>();
         List<List<Integer>> result = new ArrayList<>(); // Stores all possible paths
         List<Integer> currentPath = new ArrayList<>(); // Current path
 
         // Start DFS from node 0 (or iterate over all nodes for disconnected graphs)
-        allPossibleDfsPathHelper(graph, 0, visited, currentPath, result);
+        allPossibleDfsPathHelper(graph, src, visited, currentPath, result);
         return result;
     }
 
