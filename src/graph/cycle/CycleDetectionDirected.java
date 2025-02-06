@@ -8,13 +8,13 @@ public class CycleDetectionDirected implements CycleDetection {
         return false;
     }
 
-    private boolean hasCycleHelper(List<List<Integer>> graph, int src, boolean[] visited, boolean[] recStack) {
+    private boolean hasCycleDFS(List<List<Integer>> graph, int src, boolean[] visited, boolean[] recStack) {
         visited[src] = true;
         recStack[src] = true;
 
         for (int nei : graph.get(src)) {
             if (!visited[nei]) {
-                if (hasCycleHelper(graph, nei, visited, recStack)) {
+                if (hasCycleDFS(graph, nei, visited, recStack)) {
                     return true; // Cycle detected in the subtree
                 }
             } else if (recStack[nei]) {
@@ -30,14 +30,14 @@ public class CycleDetectionDirected implements CycleDetection {
         return 0;
     }
 
-    private int cycleLengthHelper(List<List<Integer>> graph, int src, boolean[] visited, boolean[] recStack, int[] depth, int currentDepth) {
+    private int cycleLengthDFS(List<List<Integer>> graph, int src, boolean[] visited, boolean[] recStack, int[] depth, int currentDepth) {
         visited[src] = true; // Mark the current node as visited
         recStack[src] = true; // Add the current node to the recursion stack
         depth[src] = currentDepth; // Store the depth of the current node
 
         for (int nei : graph.get(src)) {
             if (!visited[nei]) {
-                int cycleLength = cycleLengthHelper(graph, nei, visited, recStack, depth, currentDepth + 1);
+                int cycleLength = cycleLengthDFS(graph, nei, visited, recStack, depth, currentDepth + 1);
                 if (cycleLength > 0) {
                     return cycleLength; // Propagate the cycle length back to the caller
                 }
