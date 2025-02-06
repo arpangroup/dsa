@@ -25,9 +25,8 @@ public class DFSTraversal {
 
     public static List<Integer> dfs(List<List<Integer>> graph, Integer src) {
         Set<Integer> visited = new HashSet<>();
-        Set<Integer> recPath = new HashSet<>();
         dfsHelper(graph, 0, visited);
-        return List.of();
+        return visited.stream().toList();
     }
 
     /**
