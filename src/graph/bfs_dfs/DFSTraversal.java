@@ -38,7 +38,7 @@ public class DFSTraversal {
      *          recPath in directed graph?
      *
      */
-    private static void dfsHelper(List<List<Integer>> graph, int src, Set<Integer> visited) {
+    public static void dfsHelper(List<List<Integer>> graph, int src, Set<Integer> visited) {
         if (visited.contains(src)) return;
         System.out.print(src + " ");
 
