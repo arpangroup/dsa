@@ -1,12 +1,27 @@
 package graph.cycle;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CycleDetectionDirected implements CycleDetection {
     @Override
     public boolean hasCycle(List<List<Integer>> graph) {
+        return false;
+    }
+
+    private boolean hasCycleHelper(List<List<Integer>> graph, int src, boolean[] visited, boolean[] recStack) {
+        visited[src] = true;
+        recStack[src] = true;
+
+        for (int neighbour : graph.get(src)) {
+            if (!visited[src]) {
+                if (hasCycleHelper(graph, neighbour, visited, recStack)) {
+                    return true; // Cycle detected in the subtree
+                }
+            } else if (recStack[neighbour]) {
+                return true; // Cycle detected (node is already in the recursion stack)
+            }
+        }
+        recStack[src] = false;
         return false;
     }
 

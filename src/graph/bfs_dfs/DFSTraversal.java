@@ -39,9 +39,7 @@ public class DFSTraversal {
      *
      */
     public static void dfsHelper(List<List<Integer>> graph, int src, Set<Integer> visited) {
-        if (visited.contains(src)) return;
         System.out.print(src + " ");
-
         visited.add(src);
 
         for (int nei : graph.get(src)) {
@@ -52,9 +50,7 @@ public class DFSTraversal {
     }
 
     public static int noOfNodesInDfs(List<List<Integer>> graph, int src, Set<Integer> visited) {
-        if (visited.contains(src)) return 0;
         System.out.print(src + " ");
-
         visited.add(src);
         int count = 1;
 

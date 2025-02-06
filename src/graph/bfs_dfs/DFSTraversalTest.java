@@ -17,9 +17,10 @@ public class DFSTraversalTest {
 
 
     public static void main(String[] args) {
+        DFSTraversal.dfs(graph_directed_1); // [0, 1, 3, 5, 2, 4]
 
-        var path = DFSTraversal.allPossibleDfsPath(graph_directed_1, 0);
-        System.out.println(path); // [[0], [0, 1], [0, 1, 3], [0, 1, 3, 5], [0, 2], [0, 2, 4]]
+        //var path = DFSTraversal.allPossibleDfsPath(graph_directed_1, 0);
+        //System.out.println(path); // [[0], [0, 1], [0, 1, 3], [0, 1, 3, 5], [0, 2], [0, 2, 4]]
 
     }
 }
