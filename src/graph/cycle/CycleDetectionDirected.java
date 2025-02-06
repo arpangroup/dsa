@@ -10,8 +10,6 @@ public class CycleDetectionDirected implements CycleDetection {
         return false;
     }
 
-
-
     @Override
     public int cycleLength(List<List<Integer>> graph) {
         return 0;

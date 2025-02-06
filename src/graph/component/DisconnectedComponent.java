@@ -21,7 +21,18 @@ public class DisconnectedComponent {
         return count;
     }
 
-    public int largestComponentCount(List<List<Integer>> graph) {
-        return 0;
+    public static int largestComponentCount(List<List<Integer>> graph) {
+        Set<Integer> visited = new HashSet<>();
+        int vertices = graph.size();
+        int maxCount = Integer.MIN_VALUE;
+
+        for (int i=0; i< vertices; i++) {
+            if (!visited.contains(i)) {
+                int count = DFSTraversal.noOfNodesInDfs(graph, i, visited);
+                System.out.println("Count: " + count);
+                maxCount = Math.max(maxCount, count);
+            }
+        }
+        return maxCount;
     }
 }

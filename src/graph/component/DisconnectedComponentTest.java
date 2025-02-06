@@ -24,7 +24,11 @@ public class DisconnectedComponentTest {
 
     public static void main(String[] args) {
         int components = DisconnectedComponent.countConnectedComponents(graph_directed_1);
-        System.out.print("Total Components: " + components);
+        System.out.println("Total Components: " + components);
+
+        System.out.println("....................");
+        int largestComponent = DisconnectedComponent.largestComponentCount(graph_directed_1);
+        System.out.print("largest Components with nodes: " + largestComponent);
     }
 
 }

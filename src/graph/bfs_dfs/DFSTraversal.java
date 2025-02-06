@@ -51,6 +51,21 @@ public class DFSTraversal {
         }
     }
 
+    public static int noOfNodesInDfs(List<List<Integer>> graph, int src, Set<Integer> visited) {
+        if (visited.contains(src)) return 0;
+        System.out.print(src + " ");
+
+        visited.add(src);
+        int count = 1;
+
+        for (int nei : graph.get(src)) {
+            if (!visited.contains(nei)) {
+                count += noOfNodesInDfs(graph, nei, visited);
+            }
+        }
+        return count;
+    }
+
     public static List<List<Integer>> allPossibleDfsPath(List<List<Integer>> graph, int src) {
         Set<Integer> visited = new HashSet<>();
         List<List<Integer>> result = new ArrayList<>(); // Stores all possible paths
