@@ -2,24 +2,24 @@ package graph.cycle;
 
 import java.util.*;
 
-public class CycleDetectionUndirected<T> implements CycleDetection<T> {
+public class CycleDetectionUndirected implements CycleDetection {
     @Override
-    public boolean hasCycle(Map<T, List<T>> graph) {
+    public boolean hasCycle(List<List<Integer>> graph) {
         return false;
     }
 
     @Override
-    public int cycleLength(Map<T, List<T>> graph) {
+    public int cycleLength(List<List<Integer>> graph) {
         return 0;
     }
 
     @Override
-    public List<Integer> cyclePath(Map<T, List<T>> graph) {
+    public List<Integer> cyclePath(List<List<Integer>> graph) {
         return new ArrayList<>();
     }
 
     @Override
-    public List<List<Integer>> detectAllCycles(Map<T, List<T>> graph) {
+    public List<List<Integer>> detectAllCycles(List<List<Integer>> graph) {
         return new ArrayList<>();
     }
 
