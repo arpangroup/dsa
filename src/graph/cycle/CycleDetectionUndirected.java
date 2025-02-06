@@ -1,8 +1,6 @@
 package graph.cycle;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CycleDetectionUndirected<T> implements CycleDetection<T> {
     @Override
@@ -24,4 +22,5 @@ public class CycleDetectionUndirected<T> implements CycleDetection<T> {
     public List<List<Integer>> detectAllCycles(Map<T, List<T>> graph) {
         return new ArrayList<>();
     }
+
 }
