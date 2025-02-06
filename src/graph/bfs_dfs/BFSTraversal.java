@@ -46,7 +46,7 @@ public class BFSTraversal {
      * https://www.geeksforgeeks.org/count-number-nodes-given-level-using-bfs/
      * https://www.geeksforgeeks.org/level-order-tree-traversal/
      */
-    public static List<List<Integer>> countLevels(List<List<Integer>> graph, int root) {
+    public static List<List<Integer>> getNodesInEachLevel(List<List<Integer>> graph, int root) {
         Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[graph.size()];
         List<List<Integer>> levels = new ArrayList<>();

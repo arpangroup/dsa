@@ -43,7 +43,7 @@ public class BFSTraversalTest {
 
 //        test_simpleDirectedGraph_without_cycle();
 //        test_simpleDirectedGraph_with_cycle();
-        test_countHeight();
+//        test_countHeight();
 
     }
 
@@ -63,7 +63,7 @@ public class BFSTraversalTest {
         GraphUtil.printGraph(graph_directed_2);
         //BFSTraversal.bfsPrintForDAG(graph_directed_2); // goes in infinite loop
 
-        List<List<Integer>> path = BFSTraversal.countLevels(graph_directed_2, 0);
+        List<List<Integer>> path = BFSTraversal.getNodesInEachLevel(graph_directed_2, 0);
         System.out.print(path);
     }
 }
