@@ -10,7 +10,7 @@ public class DijkstraWithSet {
         Arrays.fill(dist, Integer.MAX_VALUE);
 
         dist[src] = 0;
-        set.add(new Pair(0, src));
+        set.add(new Pair(src, 0));
 
         while (!set.isEmpty()) {
             Pair current = set.pollFirst(); // Extract the node with the smallest distance
@@ -24,11 +24,11 @@ public class DijkstraWithSet {
                 int newDistance = distance + edgeWeight;
                 if (newDistance < dist[adjNode]) {
                     // Remove the old entry if it exists
-                    set.remove(new Pair(dist[adjNode], adjNode));
+                    set.remove(new Pair(adjNode, dist[adjNode]));
 
                     // Update the shortest distance
                     dist[adjNode] = newDistance;
-                    set.add(new Pair(newDistance, adjNode));
+                    set.add(new Pair(adjNode, newDistance));
                 }
             }
         }

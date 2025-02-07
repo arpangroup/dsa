@@ -11,7 +11,7 @@ public class DijkstraWithPriorityQueue {
         Arrays.fill(dist, Integer.MAX_VALUE);
 
         dist[src] = 0; // from src -> src distance is always 0.
-        pq.add(new Pair(0, src));
+        pq.add(new Pair(src, 0));
 
         while (!pq.isEmpty()) {
             Pair current = pq.poll();
@@ -25,7 +25,7 @@ public class DijkstraWithPriorityQueue {
                 int newDistance = distance + edgeWeight;
                 if (newDistance < dist[adjNode]) {
                     dist[adjNode] = newDistance;
-                    pq.add(new Pair(newDistance, adjNode));
+                    pq.offer(new Pair(adjNode, newDistance));
                 }
             }
         }
