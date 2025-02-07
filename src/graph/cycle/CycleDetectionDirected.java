@@ -2,7 +2,7 @@ package graph.cycle;
 
 import java.util.*;
 
-public class CycleDetectionDirected implements CycleDetection {
+public class CycleDetectionDirected implements CycleDetector {
     @Override
     public boolean hasCycle(List<List<Integer>> graph) {
         return false;
