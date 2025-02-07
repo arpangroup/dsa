@@ -66,3 +66,6 @@ Consider this undirected graph:
 ### 3. Correct Detection With Parent:
 - If `v` is visited and is **not the parent** of the current node, it means there's a back edge, forming a cycle.
 - Otherwise, if `v` is the parent, it’s just part of the DFS traversal, not a cycle.
+
+
+![img_3.png](img_3.png)

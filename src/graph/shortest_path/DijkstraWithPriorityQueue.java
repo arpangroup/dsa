@@ -1,8 +1,10 @@
-package graph.path;
+package graph.shortest_path;
+
+import graph.Pair;
 
 import java.util.*;
 
-public class ShortestPath {
+public class DijkstraWithPriorityQueue {
     public static int[] shortestDistances(List<List<List<Integer>>> graph, int src) {
         PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(p -> p.distance));
         int[] dist = new int[graph.size()];

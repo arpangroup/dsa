@@ -1,8 +1,8 @@
 package graph.path;
 
 import graph.GraphUtil;
+import graph.shortest_path.DijkstraWithPriorityQueue;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,12 +27,12 @@ public class ShortestPathTest {
 
         GraphUtil.printWeightedGraph(graph);
         System.out.println("Shortest Distances..............");
-        int[] dist = ShortestPath.shortestDistances(graph, 0); // [0, 4, 4, 7, 5, 8]
+        int[] dist = DijkstraWithPriorityQueue.shortestDistances(graph, 0); // [0, 4, 4, 7, 5, 8]
         System.out.println("Distances: " + Arrays.toString(dist));
 
 
         System.out.println("Shortest Path..............");
-        List<Integer> path = ShortestPath.shortestPath(graph, 0, 5);
+        List<Integer> path = DijkstraWithPriorityQueue.shortestPath(graph, 0, 5);
         System.out.println("PATH: " + path);
     }
 }
