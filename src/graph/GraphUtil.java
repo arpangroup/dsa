@@ -38,4 +38,16 @@ public class GraphUtil {
             System.out.println();
         }
     }
+
+    public static void printWeightedGraph(List<List<List<Integer>>> adj) {
+        for (int i=0; i< adj.size(); i++) {
+            System.out.print(i + " -> ");
+            for (List<Integer> neighbor : adj.get(i)) {
+                int node = neighbor.get(0);
+                int weight = neighbor.get(1);
+                System.out.print("(" + node + ", " + weight + ") ");
+            }
+            System.out.println();
+        }
+    }
 }
