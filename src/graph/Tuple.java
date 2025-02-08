@@ -1,12 +1,14 @@
 package graph;
 
-public class Pair<T, R> {
-    public T first;
-    public R second;
+public class Tuple<P, Q, R> {
+    public P first;
+    public Q second;
+    public R third;
 
-    public Pair(T first, R second) {
+    public Tuple(P first, Q second, R third) {
         this.first = first;
         this.second = second;
+        this.third = third;
     }
 
     @Override

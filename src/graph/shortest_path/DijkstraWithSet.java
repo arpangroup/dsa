@@ -1,9 +1,18 @@
 package graph.shortest_path;
-import graph.Pair;
 
 import java.util.*;
 
 public class DijkstraWithSet {
+    static class Pair {
+        public int node;
+        public int distance;
+
+        public Pair(int node, int distance) {
+            this.node = node;
+            this.distance = distance;
+        }
+    }
+
     public static int[] shortestDistances(List<List<List<Integer>>> graph, int src) {
         TreeSet<Pair> set = new TreeSet<>();
         int[] dist = new int[graph.size()];
@@ -34,4 +43,6 @@ public class DijkstraWithSet {
         }
         return dist;
     }
+
+
 }

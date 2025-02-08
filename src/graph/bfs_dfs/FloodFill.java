@@ -29,7 +29,7 @@ public class FloodFill {
             // then check for same initial color and unvisited pixel
             if(nrow>=0 && nrow<n && ncol>=0 && ncol < m &&
                     image[nrow][ncol] == iniColor && ans[nrow][ncol] != newColor) {
-                dfs(nrow, ncol, ans, image, newColor, delRow, delCol, iniColor);
+                dfs(nrow, ncol, ans, image, newColor, iniColor);
             }
         }
     }

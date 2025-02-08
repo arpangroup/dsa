@@ -2,7 +2,7 @@ package graph.component;
 
 import java.util.*;
 
-public class IcelandCount {
+public class IslandCount {
     public int countIcelandBFS(int[][] grid) {
         int[][] visited = new int[grid.length][grid[0].length];
         int count = 0;
