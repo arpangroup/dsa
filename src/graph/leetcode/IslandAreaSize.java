@@ -5,8 +5,10 @@ import graph.Pair;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// LeetCode: 695. Max Area of Island
-// https://leetcode.com/problems/max-area-of-island
+/**
+ * LeetCode: 695. Max Area of Island
+ *  https://leetcode.com/problems/max-area-of-island
+ */
 public class IslandAreaSize {
 
     public int maxAreaOfIsland(int[][] grid) {

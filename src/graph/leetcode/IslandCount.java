@@ -4,8 +4,11 @@ import graph.Pair;
 
 import java.util.*;
 
-// LeetCode: 200. Number of Islands
-// https://leetcode.com/problems/number-of-islands
+
+/**
+ * LeetCode: 200. Number of Islands
+ * https://leetcode.com/problems/number-of-islands
+ */
 public class IslandCount {
     private static final int[] delRow = new int[]{-1, 0, +1, 0};
     private static final int[] delCol = new int[]{0, +1, 0, -1};

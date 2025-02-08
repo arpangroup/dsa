@@ -1,13 +1,18 @@
-package graph.component;
+package graph.leetcode;
 
 import graph.Pair;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-// https://leetcode.com/problems/number-of-closed-islands/
-// 1254. Number of Closed Islands
+/**
+ * LeetCode: 1254. Number of Closed Islands
+ *  https://leetcode.com/problems/number-of-closed-islands/
+ */
 public class ClosedIslandCount {
+    static final int[] delRow = new int[]{-1, 0, +1, 0};
+    static final int[] delCol = new int[]{0, +1, 0, -1};
+
     public int closedIsland(int[][] grid) {
         if (grid == null || grid.length == 0) return 0;
         int[] delRow = new int[]{-1, 0, +1, 0};
@@ -21,17 +26,19 @@ public class ClosedIslandCount {
         for(int row = 0; row < rows; row ++) {
             for (int col = 0; col < cols; col ++) {
                 if (grid[row][col] == 0 && visited[row][col] == 0) { // if land && not yet visited
-//                    if(bfs(grid, row, col, visited, delRow, delCol)) {
+//                    if(bfs(grid, row, col, visited)) {
 //                        count++;
 //                    }
-                    count += dfs(grid, row, col, visited, delRow, delCol);
+                    if (dfs(grid, row, col, visited)) {
+                        count ++;
+                    }
                 }
             }
         }
         return count;
     }
 
-    private boolean bfs(int[][] grid, int row, int col, int[][] visited, int[] delRow, int[] delCol) {
+    private boolean bfs(int[][] grid, int row, int col, int[][] visited) {
         Queue<Pair> q = new LinkedList<>();
         boolean isClosed = true;
 
@@ -62,22 +69,27 @@ public class ClosedIslandCount {
         return isClosed;
     }
 
-    private int dfs(int[][] grid, int row, int col, int[][] visited, int[] delRow, int[] delCol) {
-        //if (row == 0 || col == 0 || row == grid.length - 1 || col == grid[0].length - 1) return 0; // false
-        if (!isValidCell(grid, row, col)) return 0; // false
-        if (grid[row][col] == 1 || visited[row][col] == 1) return 1; // If the current cell is water or already visited, return 1 (part of a closed island so far)
+    private boolean dfs(int[][] grid, int row, int col, int[][] visited) {
+        if (!isValidCell(grid, row, col)) return false; // 0
+        if (grid[row][col] == 1 || visited[row][col] == 1) return true; // 1=>water; 0=>Land
+        if (row == 0 || row == grid.length - 1 || col ==0 || col == grid[0].length - 1) return false; // 0
 
         visited[row][col] = 1;
-//        int bottom = dfs(grid, row + 1, col, visited, delRow, delCol);
-//        int top = dfs(grid, row - 1, col, visited, delRow, delCol);
-//        int right = dfs(grid, row, col + 1, visited, delRow, delCol);
-//        int left = dfs(grid, row , col - 1, visited, delRow, delCol);
-//        return (top == 1 && bottom == 1 && left == 1 && right == 1) ? 1 : 0;
 
-        return (dfs(grid, row - 1, col, visited, delRow, delCol) == 1 &&
-                dfs(grid, row + 1, col, visited, delRow, delCol) == 1 &&
-                dfs(grid, row, col - 1, visited, delRow, delCol) == 1 &&
-                dfs(grid, row, col + 1, visited, delRow, delCol) == 1) ? 1 : 0;
+        // If the current cell is on the boundary and it's land, it's not a closed island
+        boolean isClosed = true;
+        if (row == 0 || row == grid.length - 1 || col == 0 || col == grid[0].length - 1) {
+            isClosed = false;
+        }
+
+        // Recursively check all four directions
+        boolean top = dfs(grid, row - 1, col, visited);
+        boolean bottom = dfs(grid, row + 1, col, visited);
+        boolean left = dfs(grid, row, col - 1, visited);
+        boolean right = dfs(grid, row, col + 1, visited);
+
+        // If any of the recursive calls reach the boundary, it's not a closed island
+        return isClosed && top && bottom && left && right;
     }
 
     private boolean isValidCell(int[][] grid, int row, int col) {
