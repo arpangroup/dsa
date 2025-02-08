@@ -2,15 +2,15 @@ package graph;
 
 public class Pair<T, R> {
     public T first;
-    public R second;
+    public R last;
 
-    public Pair(T first, R second) {
+    public Pair(T first, R last) {
         this.first = first;
-        this.second = second;
+        this.last = last;
     }
 
     @Override
     public String toString() {
-        return "(" + first + ", " + second + ")";
+        return "(" + first + ", " + last + ")";
     }
 }

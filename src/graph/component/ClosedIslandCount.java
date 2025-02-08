@@ -41,7 +41,7 @@ public class ClosedIslandCount {
         while (!q.isEmpty()) {
             Pair pair = q.poll();
             int currRow = (int)pair.first;
-            int currCol = (int)pair.second;
+            int currCol = (int)pair.last;
 
             // Check if the current cell is on the boundary
             if (currRow == 0 || currRow == grid.length - 1 || currCol == 0 || currCol == grid[0].length - 1) {
@@ -68,11 +68,16 @@ public class ClosedIslandCount {
         if (grid[row][col] == 1 || visited[row][col] == 1) return 1; // If the current cell is water or already visited, return 1 (part of a closed island so far)
 
         visited[row][col] = 1;
-        int bottom = dfs(grid, row + 1, col, visited, delRow, delCol);
-        int top = dfs(grid, row - 1, col, visited, delRow, delCol);
-        int right = dfs(grid, row, col + 1, visited, delRow, delCol);
-        int left = dfs(grid, row , col - 1, visited, delRow, delCol);
-        return (top == 1 && bottom == 1 && left == 1 && right == 1) ? 1 : 0;
+//        int bottom = dfs(grid, row + 1, col, visited, delRow, delCol);
+//        int top = dfs(grid, row - 1, col, visited, delRow, delCol);
+//        int right = dfs(grid, row, col + 1, visited, delRow, delCol);
+//        int left = dfs(grid, row , col - 1, visited, delRow, delCol);
+//        return (top == 1 && bottom == 1 && left == 1 && right == 1) ? 1 : 0;
+
+        return (dfs(grid, row - 1, col, visited, delRow, delCol) == 1 &&
+                dfs(grid, row + 1, col, visited, delRow, delCol) == 1 &&
+                dfs(grid, row, col - 1, visited, delRow, delCol) == 1 &&
+                dfs(grid, row, col + 1, visited, delRow, delCol) == 1) ? 1 : 0;
     }
 
     private boolean isValidCell(int[][] grid, int row, int col) {
@@ -89,7 +94,7 @@ public class ClosedIslandCount {
         };
 
         int noOfIsland = new ClosedIslandCount().closedIsland(grid);
-        System.out.println("ClosedIsland: " + noOfIsland);
+        System.out.println("ClosedIsland: " + noOfIsland); // 2
     }
 
 }
