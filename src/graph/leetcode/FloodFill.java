@@ -2,6 +2,14 @@ package graph.leetcode;
 
 import java.util.Arrays;
 
+
+/**
+ * LeetCode: 733. Flood Fill
+ * https://leetcode.com/problems/flood-fill/
+ *
+ * Note: For very large images, the recursive approach might lead to a stack overflow.
+ * Use BFS to avoid stack overflow for large image
+ */
 public class FloodFill {
     static final int delRow[] = {-1, 0, +1, 0};
     static final int delCol[] = {0, +1, 0, -1};
