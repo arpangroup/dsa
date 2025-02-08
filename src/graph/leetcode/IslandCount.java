@@ -1,4 +1,4 @@
-package graph.component;
+package graph.leetcode;
 
 import graph.Pair;
 
