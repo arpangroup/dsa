@@ -65,6 +65,9 @@ public class BinaryMaze {
 
     // Helper method to check if a cell is within the grid bounds
     private static boolean isValidCell(int row, int col, int rows, int cols) {
+        //boolean rowInbounds = row >= 0 && row < rows;
+        //boolean colInbounds = col >= 0 && col < cols;
+
         return row >= 0 && row < rows && col >= 0 && col < cols;
     }
 
