@@ -15,8 +15,6 @@ public class ClosedIslandCount {
 
     public int closedIsland(int[][] grid) {
         if (grid == null || grid.length == 0) return 0;
-        int[] delRow = new int[]{-1, 0, +1, 0};
-        int[] delCol = new int[]{0, +1, 0, -1};
 
         int rows = grid.length;
         int cols = grid[0].length;
