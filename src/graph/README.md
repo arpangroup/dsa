@@ -2,10 +2,52 @@
 
 Representation:
 1.  [Connected Trio](https://leetcode.com/problems/minimum-degree-of-a-connected-trio-in-a-graph/description/) - LC:1761
-2. 
 
 
+### DFS
+1. Closed Island -  [GFG](https://www.geeksforgeeks.org/problems/find-number-of-closed-islands/1) |  [LC-1254](https://leetcode.com/problems/number-of-closed-islands)
+2. Distinct Island
+3. 
 
+### BFS
+1. Rotten Orange
+2. Word Ladder
+3. Word Ladder-ii
+
+
+### Cycle Detection / DAG
+1. Cycle detection Directed graph
+2. Cycle detection Undirected graph
+3. Course Schedule-I  - [LC-207](https://leetcode.com/problems/course-schedule)
+4. Course Schedule-II - [LC-210](https://leetcode.com/problems/course-schedule-ii)
+5. Detect Cycle in 2D Grid - [LC-1559](https://leetcode.com/problems/detect-cycles-in-2d-grid)
+6. Shortest Cycle in an undirected Graph
+7. Detecting odd len cycle (Bipartite)
+8. Maximum Employees to Be Invited to a Meeting - [LC-2127](https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting)
+
+
+### DAG or Topological Sort
+1. https://leetcode.com/problems/all-paths-from-source-to-target
+2. https://leetcode.com/problems/largest-color-value-in-a-directed-graph/
+
+
+### MST
+1. https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/
+2. https://leetcode.com/problems/min-cost-to-connect-all-points/
+3. https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/
+
+
+### DSU
+1. https://leetcode.com/problems/redundant-connection-ii/
+
+### Trie
+1. https://www.codingninjas.com/codestudio/problems/implement-trie_631356
+2. https://www.codingninjas.com/codestudio/problems/implement-trie_1387095
+3. https://www.codingninjas.com/codestudio/problems/complete-string_2687860
+4. https://www.codingninjas.com/codestudio/problems/count-distinct-substrings_985292
+5. https://www.codingninjas.com/codestudio/problems/maximum-xor_973113
+6. https://www.codingninjas.com/codestudio/problems/max-xor-queries_1382020
+7. https://leetcode.com/problems/word-search-ii/
 
 
 
