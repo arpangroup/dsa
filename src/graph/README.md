@@ -1,3 +1,14 @@
+# Graph
+
+Representation:
+1.  [Connected Trio](https://leetcode.com/problems/minimum-degree-of-a-connected-trio-in-a-graph/description/) - LC:1761
+2. 
+
+
+
+
+
+
 ## Directed Acyclic Graph (No-Cycle):
 <img src="../../resources/graph1.png" width="180" height="200">
 
