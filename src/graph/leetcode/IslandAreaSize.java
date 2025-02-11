@@ -22,7 +22,7 @@ public class IslandAreaSize {
         for(int row = 0; row < rows; row ++) {
             for (int col = 0; col < cols; col ++) {
                 if (grid[row][col] == 1 && visited[row][col] == 0) { // if land && not yet visited
-                    int currSize = dfs(grid, row, col, visited);
+                    int currSize = dfs(grid, visited, row, col);
                     size = Math.max(size, currSize);
                 }
             }
@@ -31,17 +31,17 @@ public class IslandAreaSize {
     }
 
     // using DFS:
-    private int dfs(int[][] grid, int row, int col, int[][] visited) {
+    private int dfs(int[][] grid, int[][] visited, int row, int col) {
         if (!isValidCell(grid, row, col)) return 0;
         if (grid[row][col] == 0 || visited[row][col] == 1) return 0; // water
 
         visited[row][col] = 1; // Mark as visited
 
         int size = 1;
-        size += dfs(grid, row - 1, col, visited); // Up
-        size += dfs(grid, row + 1, col, visited); // Down
-        size += dfs(grid, row, col - 1, visited); // Left
-        size += dfs(grid, row, col + 1, visited); // Right
+        size += dfs(grid, visited, row - 1, col); // Up
+        size += dfs(grid, visited, row + 1, col); // Down
+        size += dfs(grid, visited, row, col - 1); // Left
+        size += dfs(grid, visited, row, col + 1); // Right
 
         return size;
     }
