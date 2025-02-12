@@ -4,7 +4,7 @@ import graph.Pair;
 
 import java.util.*;
 
-public class WordLadder {
+public class WordLadder1 {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if(wordList == null || wordList.size() == 0) return 0;
         Set<String> wordSet = new HashSet<>();
@@ -46,9 +46,9 @@ public class WordLadder {
     }
 
     public static void main(String[] args) {
-        WordLadder wordLadder = new WordLadder();
-        int result = wordLadder.ladderLength("hit", "cog", List.of("hot", "dot", "dog", "lot", "log", "cog")); // 5
-        int result1 = wordLadder.ladderLength("hit", "cog", List.of("hot", "dot", "dog", "lot", "log")); // 5
+        WordLadder1 wordLadder1 = new WordLadder1();
+        int result = wordLadder1.ladderLength("hit", "cog", List.of("hot", "dot", "dog", "lot", "log", "cog")); // 5
+        int result1 = wordLadder1.ladderLength("hit", "cog", List.of("hot", "dot", "dog", "lot", "log")); // 0
         System.out.println("RESULT: " + result1);
     }
 }

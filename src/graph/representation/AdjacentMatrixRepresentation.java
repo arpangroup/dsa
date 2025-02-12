@@ -1,6 +1,4 @@
-package graph.graph_01_representation;
-
-import graph.Pair;
+package graph.representation;
 
 import java.util.*;
 

@@ -1,7 +1,7 @@
 ### Q1: 1971. Find if Path Exists in Graph
 Example 1:
 
-![img.png](img.png)
+![img.png](../../resources/img.png)
 
 ````
 Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
@@ -13,7 +13,7 @@ Explanation: There are two paths from vertex 0 to vertex 2:
 
 Example 2:
 
-![img_1.png](img_1.png)
+![img_1.png](../../resources/img_1.png)
 
 ````
 Input: n = 6, edges = [[0,1],[0,2],[3,5],[5,4],[4,3]], source = 0, destination = 5
