@@ -23,11 +23,11 @@ Representation:
 
 ### Cycle Detection / DAG
 1. Cycle detection Directed graph - [GFG](https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
-2. Course Schedule-I  - [LC-207](https://leetcode.com/problems/course-schedule)
-3. Course Schedule-II - [LC-210](https://leetcode.com/problems/course-schedule-ii)
+2. Course Schedule-I  - [GFG](https://www.geeksforgeeks.org/find-course-schedule-ii/) | [LC-207](https://leetcode.com/problems/course-schedule)
+3. Course Schedule-II - [GFG](https://www.geeksforgeeks.org/problems/course-schedule/1) | [LC-210](https://leetcode.com/problems/course-schedule-ii)
 4.
 5. Cycle detection Undirected graph - [GFG](https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1)
-6. Detect Cycle in 2D Grid - [LC-1559](https://leetcode.com/problems/detect-cycles-in-2d-grid)
+6. Detect Cycle in 2D Grid - [GFG](https://www.geeksforgeeks.org/detect-cycle-in-a-2d-grid/) | [LC-1559](https://leetcode.com/problems/detect-cycles-in-2d-grid)
 7. **Detect Cycle in Graph using DSU**
 8.
 9. Detecting odd length cycle (Bipartite)
@@ -38,11 +38,11 @@ Representation:
 1. Topological Sort Practice - [GFG](https://practice.geeksforgeeks.org/problems/topological-sort/1)
 2. Course Schedule-I  - [LC-207](https://leetcode.com/problems/course-schedule)
 3. Course Schedule-II - [LC-210](https://leetcode.com/problems/course-schedule-ii)
-4. Find eventual safe states [LC-802](https://leetcode.com/problems/find-eventual-safe-states)
-5. Alien dictionary
+4. Find eventual safe states [GFG](https://www.geeksforgeeks.org/problems/eventual-safe-states/0) | [LC-802](https://leetcode.com/problems/find-eventual-safe-states)
+5. Alien dictionary - [GFG](https://www.geeksforgeeks.org/problems/alien-dictionary/1)
 6. Is Graph Bipartite? [GFG](https://www.geeksforgeeks.org/problems/bipartite-graph/1) | [LC-785](https://leetcode.com/problems/is-graph-bipartite)
-5. Largest Color Value in a Directed Graph [LC-1857](https://leetcode.com/problems/largest-color-value-in-a-directed-graph)
-6. https://leetcode.com/problems/all-paths-from-source-to-target
+7. Largest Color Value in a Directed Graph [LC-1857](https://leetcode.com/problems/largest-color-value-in-a-directed-graph)
+8. https://leetcode.com/problems/all-paths-from-source-to-target
 
 
 ### Shortest Path
