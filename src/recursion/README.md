@@ -6,9 +6,9 @@
 | decimalToBinary                           |                                                                               |
 | binarySearch                              |                                                                               |
 | printLinkedList                           |                                                                               |
-| Reverse String / Array                    |                  |
-| Sort an Array using Recursion             |                  |
-| Delete middle element of a Stack          |                  |
+| Reverse String / Array                    |                                                                               |
+| Sort an Array using Recursion             |                                                                               |
+| Delete middle element of a Stack          |                                                                               |
 | reverseLinkedList                         | [LC-206](https://leetcode.com/problems/reverse-linked-list/)                  |
 | Merge Two Sorted List                     | [LC-21](https://leetcode.com/problems/merge-two-sorted-lists/)                |
 | Recursive Implementation of atoi()        | [LC-8](https://leetcode.com/problems/string-to-integer-atoi/)                 |
@@ -26,4 +26,4 @@
 | Combination Sum III                       | [LC-216](https://leetcode.com/problems/combination-sum-iii/)                  |
 | Subset Sum-I                              | [GFG](https://www.geeksforgeeks.org/problems/subset-sums2234/1)               |
 | **Letter Combinations of a Phone number** | [LC-17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) |
-| Palindrome Partitioning                   | [LC-131](https://leetcode.com/problems/palindrome-partitioning/) |
+| Palindrome Partitioning                   | [LC-131](https://leetcode.com/problems/palindrome-partitioning/)              |
