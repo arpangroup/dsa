@@ -10,7 +10,7 @@ Representation:
 3. Closed Island -  [GFG](https://www.geeksforgeeks.org/problems/find-number-of-closed-islands/1) |  [LC-1254](https://leetcode.com/problems/number-of-closed-islands)
 4. Number of Enclaves - **Multi source BFS** - [GFG](https://www.geeksforgeeks.org/problems/number-of-enclaves/0) | [LC-1020](https://leetcode.com/problems/number-of-enclaves)
 5. Distinct Island - [GFG](https://www.geeksforgeeks.org/problems/number-of-distinct-islands/0)
-6. Word Search - [GFG](https://www.geeksforgeeks.org/problems/word-search/1) | [LC-70](https://leetcode.com/problems/word-search)
+6. Word Search - [GFG](https://www.geeksforgeeks.org/problems/word-search/1) | [LC-79](https://leetcode.com/problems/word-search)
 
 ### BFS
 1. BFS of graph - [GFG](https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1)
@@ -50,7 +50,7 @@ Representation:
 2. Dijkstra Algorithm - [GFG](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
 3. Shortest path in a binary maze - [GFG](https://www.geeksforgeeks.org/problems/shortest-path-in-a-binary-maze-1655453161/1) | [LC-1091](https://leetcode.com/problems/shortest-path-in-binary-matrix)
 5. Path with minimum effort - [LC-1631](https://leetcode.com/problems/path-with-minimum-effort)
-5. Cheapest flights within k stops [LC-787](https://leetcode.com/problems/cheapest-flights-within-k-stops)
+5. **Cheapest flights within k stops - Not fit directly to Dijkstra** [LC-787](https://leetcode.com/problems/cheapest-flights-within-k-stops)
 6. Network Delay Time - [LC-743](https://leetcode.com/problems/network-delay-time)
 7. Number of ways to arrive at destination
 8. Minimum steps to reach end from start by performing multiplication and mod operations with array elements
@@ -74,7 +74,7 @@ Representation:
 
 ### Mixed BFS/DFS Problems:
 1. Pacific Atlantic Water Flow - [LC-417](https://leetcode.com/problems/pacific-atlantic-water-flow)
-2. 
+2. [Maximum Connected group (Making A Large Island)](https://www.geeksforgeeks.org/maximum-connected-group-making-a-large-island/)
 
 ### Trie
 1. https://www.codingninjas.com/codestudio/problems/implement-trie_631356
