@@ -18,9 +18,7 @@ public class Recursion_01_PrintN {
     }
 
     public List<Integer> getNumbersAsc(int n) {
-        if(n < 1) {
-            return new ArrayList<>();
-        }
+        if(n < 1) return new ArrayList<>();
         List<Integer> list = getNumbersAsc(n-1);
         list.addFirst(n);
         return list;
