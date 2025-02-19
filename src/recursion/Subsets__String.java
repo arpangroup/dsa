@@ -3,7 +3,7 @@ package recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsets3String {
+public class Subsets__String {
     public List<String> subsets(String str) {
         List<String> result = new ArrayList<>();
         //backtrackV1(str, "", result);
@@ -47,7 +47,7 @@ public class Subsets3String {
 
 
     public static void main(String[] args) {
-        Subsets3String solution = new Subsets3String();
+        Subsets__String solution = new Subsets__String();
         System.out.println(solution.subsets("abc"));
     }
 }

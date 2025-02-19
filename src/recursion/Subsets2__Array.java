@@ -4,7 +4,7 @@ import java.util.*;
 
 // LeetCode-90. Subsets II - Unique subsets
 // https://leetcode.com/problems/subsets-ii/
-public class Subsets2Array {
+public class Subsets2__Array {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
@@ -45,7 +45,7 @@ public class Subsets2Array {
     }
 
     public static void main(String[] args) {
-        Subsets2Array solution = new Subsets2Array();
+        Subsets2__Array solution = new Subsets2__Array();
         var result = solution.subsetsWithDup(new int[] {1, 2, 2});
         System.out.println(result);
     }

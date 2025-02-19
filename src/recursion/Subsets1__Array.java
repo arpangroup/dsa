@@ -4,7 +4,7 @@ import java.util.*;
 
 // LeetCode-78. Subsets
 // https://leetcode.com/problems/subsets/
-public class Subsets1Array {
+public class Subsets1__Array {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         //backtrackV1(nums, 0, result, new ArrayList<>());
@@ -40,7 +40,7 @@ public class Subsets1Array {
     }
 
     public static void main(String[] args) {
-        Subsets1Array solution = new Subsets1Array();
+        Subsets1__Array solution = new Subsets1__Array();
         var result = solution.subsets(new int[] {1, 2, 3});
         System.out.println(result);
     }

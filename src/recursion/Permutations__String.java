@@ -1,10 +1,9 @@
 package recursion;
 
-import java.net.ServerSocket;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PermutationOfString {
+public class Permutations__String {
     public void permutationUsingRecursion(String input, String output) {
         if (input.length() == 0) {
             System.out.println(output);
@@ -39,6 +38,6 @@ public class PermutationOfString {
 
     public static void main(String[] args) {
         //new PermutationOfString().permutationUsingRecursion("aa", "");
-        new PermutationOfString().permutationUsingRecursionWithoutDuplicate("aba", "");
+        new Permutations__String().permutationUsingRecursionWithoutDuplicate("aba", "");
     }
 }
