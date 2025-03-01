@@ -34,6 +34,7 @@ https://medium.com/@ayushisharma5141/sliding-window-approach-types-and-problems-
 
 ## Variable Size Sliding Window
 1.	[Longest Substring Without Repeating Characters(3)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+2.  [Max Consecutive Ones III(1004)](https://leetcode.com/problems/max-consecutive-ones-iii/)
 2.	[Longest Repeating Character Replacement(424)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 3.	[Sliding Window Maximum(239)](https://leetcode.com/problems/sliding-window-maximum/)
 4.	[**Minimum Window Substring(76)**](https://leetcode.com/problems/minimum-window-substring/)
@@ -43,4 +44,4 @@ https://medium.com/@ayushisharma5141/sliding-window-approach-types-and-problems-
 8.	[Fruit Into Baskets(904)](https://leetcode.com/problems/fruit-into-baskets/)
 9.	[Count Number of Nice Subarrays(1248)](https://leetcode.com/problems/count-number-of-nice-subarrays/)
 10.	[Arithmetic Slices(413)](https://leetcode.com/problems/arithmetic-slices/)
-11.	[Subarrays-with-k-different-integers(992)](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+11.	[**Subarrays-with-k-different-integers(992)**](https://leetcode.com/problems/subarrays-with-k-different-integers/)
