@@ -6,7 +6,7 @@ public class Subsets {
         int n = arr.length;
         for (int i=0; i< Math.pow(2, n); i++) {
             for (int j = i; j< arr.length; j++) {
-                 System.out.println("{" + arr[i][j] + "");
+                 System.out.println("{" + arr[j] + "");
             }
         }
     }

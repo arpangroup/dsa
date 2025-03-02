@@ -2,7 +2,7 @@ package sliding_window;
 
 public class MaxConsecutiveOnes3 {
     public int longestOnes(int[] nums, int k) {
-
+        return 0;
     }
 
     public static void main(String[] args) {

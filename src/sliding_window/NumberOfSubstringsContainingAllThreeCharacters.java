@@ -2,11 +2,11 @@ package sliding_window;
 
 public class NumberOfSubstringsContainingAllThreeCharacters {
     public int numberOfSubstrings(String s) {
-
+        return 0;
     }
 
     public static void main(String[] args) {
-        NumberOfSubstringsContainingAllThreeCharacters solution = new NumberOfSubstringsContainingAllThreeCharacters()
+        NumberOfSubstringsContainingAllThreeCharacters solution = new NumberOfSubstringsContainingAllThreeCharacters();
         String[] inputs = new String[]{
                 "abcabc",
                 "aaacb",

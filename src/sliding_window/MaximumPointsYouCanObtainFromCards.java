@@ -3,7 +3,7 @@ package sliding_window;
 public class MaximumPointsYouCanObtainFromCards {
 
     public int maxScore(int[] cardPoints, int k) {
-
+        return 0;
     }
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package sliding_window;
 
 public class LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {
-
+        return 0;
     }
 
     public static void main(String[] args) {

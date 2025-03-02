@@ -2,7 +2,7 @@ package sliding_window;
 
 public class FruitIntoBaskets {
     public int totalFruit(int[] fruits) {
-
+        return 0;
     }
 
     public static void main(String[] args) {

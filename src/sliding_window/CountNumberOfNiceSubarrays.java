@@ -2,7 +2,7 @@ package sliding_window;
 
 public class CountNumberOfNiceSubarrays {
     public int numberOfSubarrays(int[] nums, int k) {
-
+        return 0;
     }
 
     public static void main(String[] args) {
