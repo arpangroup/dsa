@@ -5,6 +5,55 @@ https://leetcode.com/problem-list/sliding-window/
 https://medium.com/@ayushisharma5141/sliding-window-approach-types-and-problems-b1e256e2e92b
 
 
+<table>
+<tr>
+<td>Fixed Size</td>
+<td>Variable Size</td>
+</tr>
+<tr>
+<td>
+<pre>
+public static void fixedSlidingWindow(int[] arr, int k) {
+    int left =0, right = 0;           // step1: initialization
+    while (right < arr.length) {
+        sum += arr[right];            // Step2: Accumulate result <br/>
+        if(windowSize < k) right ++;  // Step3: grow till window size
+        else if (windowSize == k) {            
+            max = Math.max(max, sum); // Step4: calculate ans <br/>
+            // Step5: Slide the window ==> Remove Left + slide(i++; j++)
+            sum = sum - arr[left];    // Step5.1. Remove calculation for left
+            left ++; right++;         // Step5.2. Slide the window
+        }
+    }
+    
+}
+</pre>
+</td>
+<td>
+<pre>
+public static void variableSlidingWindow(int[] arr, int k) {
+    int left = 0, right = 0;
+    int sum = 0, max = 0;
+    while (right < arr.length) {
+        sum += arr[right]; <br/>
+        if (sum < k) right++;
+        if (sum == k) {
+            max = Math.max(max, right - left + 1);
+            right++;
+        } else if (sum > k) {
+            //while (sum >  k) {sum -= arr[left]; left++}
+            sum -= arr[left];
+            left++;
+            right++;
+        }
+    }
+    return maxWindowSize;
+}
+</pre>
+</td>
+</tr>
+</table>
+
 
 ## Template: Fixed Size Window:
 ````java
@@ -28,19 +77,24 @@ public static void fixedSlidingWindow(int[] arr, int k) {
 ## Variable Size Sliding Window
 ````java
 public static void variableSlidingWindow(int[] arr, int k) {
-    int left =0, right = 0;           // step1: initialization
+    int left = 0, right = 0;
+
+    int sum = 0, max = 0;
     while (right < arr.length) {
-        sum += arr[right];            // Step2: Accumulate result
+        sum += arr[right];
 
-        if(windowSize < k) right ++;  // Step3: grow till window size
-        else if (windowSize == k) {            
-            max = Math.max(max, sum); // Step4: calculate ans
-
-            // Step5: Slide the window ==> Remove Left + slide(i++; j++)
-            sum = sum - arr[left];    // Step5.1. Remove calculation for left
-            left ++; right++;         // Step5.2. Slide the window
+        if (sum < k) right++;
+        if (sum == k) {
+            max = Math.max(max, right - left + 1);
+            right++;
+        } else if (sum > k) {
+            //while (sum >  k) sum -= arr[left];
+            sum -= arr[left];
+            left++;
+            right++;
         }
     }
+    return maxWindowSize;
 }
 ````
 
