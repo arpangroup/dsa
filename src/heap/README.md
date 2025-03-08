@@ -25,3 +25,4 @@
 23. Longest Happy String [LC-1405](https://leetcode.com/problems/longest-happy-string/)
 24. Hand of Straights [LC-846](https://leetcode.com/problems/hand-of-straights/)
 25. Trapping Rain Water II [LC-407](https://leetcode.com/problems/trapping-rain-water-ii/) `Hard`
+26. 
