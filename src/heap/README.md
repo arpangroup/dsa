@@ -16,9 +16,11 @@
 13. Trapping Rain Water II [LC-407](https://leetcode.com/problems/trapping-rain-water-ii/)
 14. Strong Password Checker [LC-420](https://leetcode.com/problems/strong-password-checker)
 15. IPO [LC-502](https://leetcode.com/problems/ipo/)
-16. Remove Stones to Minimize the Total [LC-1962](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)
+16. 
+17. Remove Stones to Minimize the Total [LC-1962](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)
 17. Single-Threaded CPU [LC-1834](https://leetcode.com/problems/single-threaded-cpu/)
-18. **Last Stone Weight** [LC-1046](https://leetcode.com/problems/last-stone-weight/)
+18. 
+19. **Last Stone Weight** [LC-1046](https://leetcode.com/problems/last-stone-weight/)
 19. **Total Cost to Hire K Workers** `Using 2 Heap` [LC-2462](https://leetcode.com/problems/total-cost-to-hire-k-workers/)
 20. **Task Scheduler** [LC-621](https://leetcode.com/problems/task-scheduler/)
 21. `IMPORTANT` **Range Sum of Sorted Subarray Sums** [LC-1508](https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/)
