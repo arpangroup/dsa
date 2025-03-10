@@ -7,9 +7,9 @@
 4. Find K Closest Elements [LC-658](https://leetcode.com/problems/find-k-closest-elements/)
 5. K Closest Points to Origin [LC-973](https://leetcode.com/problems/k-closest-points-to-origin/)
 6. `IMPORTANT` **Find K Pairs with Smallest Sums** [LC-373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
-7.
+7. `IMPORTANT` **Find Median from Data Stream** [LC-295](https://leetcode.com/problems/find-median-from-data-stream) `Hard`
 8. Kth Smallest Element in a Sorted Matrix [LC-378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
-9. Find Median from Data Stream [LC-295](https://leetcode.com/problems/find-median-from-data-stream) `Hard`
+9. 
 10.
 11. The Skyline Problem [LC-218](https://leetcode.com/problems/the-skyline-problem/)
 12. Design Twitter [LC-355](https://leetcode.com/problems/design-twitter/)
