@@ -1,6 +1,6 @@
 package heap;
 
-import java.util.Arrays;
+import java.util.*;
 
 /*
     LeetCode       : 1508
@@ -92,6 +92,6 @@ public class RangeSumOfSortedSubarraySums {
         n = 4;
         left= 1;
         right = 10;
-        System.out.println(solution.rangeSum(nums, n, left, right)); // 30
+        System.out.println(solution.rangeSum(nums, n, left, right)); // 50
     }
 }
