@@ -16,7 +16,7 @@ public class SmallestRangeCoveringElementsFromKLists {
         SmallestRangeCoveringElementsFromKLists solution = new SmallestRangeCoveringElementsFromKLists();
         List<List<Integer>> nums1 = List.of(
                 List.of(4,10,15,24,26),
-                List.of(0,9,12,2),
+                List.of(0,9,12,20),
                 List.of(5,18,22,30)
         );
         System.out.println(Arrays.toString(solution.smallestRange(nums1))); // [20,24]
