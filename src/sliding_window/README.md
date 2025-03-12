@@ -100,6 +100,10 @@ public static void variableSlidingWindow(int[] arr, int k) {
 
 ## Fixed Size Sliding Window
 1.  [Find sum of all K size subarrays(560)](https://leetcode.com/problems/subarray-sum-equals-k/)
+    1. **Range Sum of Sorted Subarray Sums** [LC-1508](https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/) `Heap`
+    2. **Sum of Subarray Ranges** [LC-2104](https://leetcode.com/problems/sum-of-subarray-ranges/) `stack & queue`
+    2. Sum of Subarray Minimums [LC-907](https://leetcode.com/problems/sum-of-subarray-minimums/) `stack & queue`
+    3. 
 2.  [Find All Anagrams in a String(438)](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
 3.  [Maximum Sum of Distinct Subarrays With Length K(2461)](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description/)
 4.  [Substring with Concatenation of All Words(30)](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
