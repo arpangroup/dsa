@@ -167,17 +167,17 @@ public class SmallestRangeCoveringElementsFromKLists {
         );
         System.out.println(Arrays.toString(solution.smallestRange(nums1))); // [20,24]
 
-//        List<List<Integer>> nums2 = List.of(
-//                List.of(1,2,3),
-//                List.of(1,2,3),
-//                List.of(1,2,3)
-//        );
-//        System.out.println(Arrays.toString(solution.smallestRange(nums2))); // [1,1]
-//
-//        List<List<Integer>> nums3 = List.of(
-//                List.of(1)
-//        );
-//        System.out.println(Arrays.toString(solution.smallestRange(nums2))); // [1,1]
+        List<List<Integer>> nums2 = List.of(
+                List.of(1,2,3),
+                List.of(1,2,3),
+                List.of(1,2,3)
+        );
+        System.out.println(Arrays.toString(solution.smallestRange(nums2))); // [1,1]
+
+        List<List<Integer>> nums3 = List.of(
+                List.of(1)
+        );
+        System.out.println(Arrays.toString(solution.smallestRange(nums2))); // [1,1]
 
     }
 }
