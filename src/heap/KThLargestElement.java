@@ -36,16 +36,18 @@ public class KThLargestElement {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a-b); // min Heap
 
         // insert first k elements
-        for (int i=0; i< k; i++) minHeap.add(nums[i]); // O(k)
+        for (int i=0; i< k; i++) { // O(k)
+            minHeap.add(nums[i]);
+        }
 
         // Process remaining elements
         for (int i=k; i< nums.length; i++) { // If larger than min, replace
             if (nums[i] > minHeap.peek()) {
                 minHeap.poll(); // Remove the smallest element <===O(logK)
-                minHeap.add(nums[i]); // Insert the new element
+                minHeap.offer(nums[i]); // Insert the new element
             }
         }
-        return minHeap.peek();
+        return minHeap.poll();
     }
 
     public int findKthLargestV4__bucketSort(int[] nums, int k) { // Avg: O(n); Worst: O(n^2)
