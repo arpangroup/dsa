@@ -2,12 +2,13 @@
 ## Heap
 
 1. Kth largest element in array [LC-215](https://leetcode.com/problems/kth-largest-element-in-an-array/) `Sorting` `MaxHeap` `MinHeap` `Quickselect` `Bucket Sort` 
-2. **Kth Largest Element in a Stream** [LC-703](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
-3. **Top K Frequent Elements** [LC-347](https://leetcode.com/problems/top-k-frequent-elements/) `MinHeap` `Bucket Sort`
-4. Top K Frequent Words [LC-692](https://leetcode.com/problems/top-k-frequent-words/)
-5. Find K Closest Elements [LC-658](https://leetcode.com/problems/find-k-closest-elements/)
-6. K Closest Points to Origin [LC-973](https://leetcode.com/problems/k-closest-points-to-origin/)
-7. Kth Smallest Element in a Sorted Matrix [LC-378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+   - Kth Largest Element in a Stream [LC-703](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+2. **Top K Frequent Elements** [LC-347](https://leetcode.com/problems/top-k-frequent-elements/) `MinHeap` `Bucket Sort`
+   - Top K Frequent Words [LC-692](https://leetcode.com/problems/top-k-frequent-words/)
+   - Find K Closest Elements [LC-658](https://leetcode.com/problems/find-k-closest-elements/)
+   - K Closest Points to Origin [LC-973](https://leetcode.com/problems/k-closest-points-to-origin/)
+3. **Kth Smallest Element in a Sorted Matrix** [LC-378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) `Binary Search`
+   - Median in a row-wise sorted Matrix [GFG](https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1) `Binary Search`
 8. Longest Happy String [LC-1405](https://leetcode.com/problems/longest-happy-string/)
 9. Last Stone Weight [LC-1046](https://leetcode.com/problems/last-stone-weight/)
 10. Remove Stones to Minimize the Total [LC-1962](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)
