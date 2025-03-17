@@ -3,6 +3,7 @@
 
 1. Kth largest element in array [LC-215](https://leetcode.com/problems/kth-largest-element-in-an-array/) `Sorting` `MaxHeap` `MinHeap` `Quickselect` `Bucket Sort` 
    - Kth Largest Element in a Stream [LC-703](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+   - Sum of elements between k1'th and k2'th smallest elements [GFG](https://www.geeksforgeeks.org/problems/sum-of-elements-between-k1th-and-k2th-smallest-elements3133/0)
 2. **Top K Frequent Elements** [LC-347](https://leetcode.com/problems/top-k-frequent-elements/) `MinHeap` `Bucket Sort`
    - Top K Frequent Words [LC-692](https://leetcode.com/problems/top-k-frequent-words/)
    - Find K Closest Elements [LC-658](https://leetcode.com/problems/find-k-closest-elements/)
