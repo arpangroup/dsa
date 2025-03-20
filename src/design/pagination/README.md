@@ -44,3 +44,11 @@ if(lastSeenTransaction.isPresent()) {
         .collect(Collectors.toList());
 }
 ````
+
+### Filter +  Sort + Pagination
+````sql
+SELECT * FROM transactions
+WHERE id > 'lastTransactionId'
+ORDER BY id ASC
+LIMIT 10
+````

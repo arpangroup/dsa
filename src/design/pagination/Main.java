@@ -29,7 +29,7 @@ public class Main {
         filteredTransactions.forEach(System.out::println);
     }*/
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         TransactionRepository transactionRepository = new TransactionRepository();
         TransactionPagination pagination = new TransactionPagination(transactionRepository);
 
@@ -39,5 +39,5 @@ public class Main {
         String lastTransactionId = firstPage.get(firstPage.size() - 1).getId();
         List<Transaction> nextPage = pagination.getTransactionsWithCursorPagination(lastTransactionId, 10);
         System.out.println("NextPage: " + nextPage);
-    }
+    }*/
 }

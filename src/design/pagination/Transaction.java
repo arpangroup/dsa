@@ -10,6 +10,8 @@ public class Transaction {
     private BigDecimal amount;
     private LocalDateTime time;
 
+    private long timestamp;
+
     public Transaction(String id, String userId, String currency, BigDecimal amount) {
         this.id = id;
         this.userId = userId;
@@ -60,6 +62,14 @@ public class Transaction {
 
     public void setTime(LocalDateTime time) {
         this.time = time;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     @Override
