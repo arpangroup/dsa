@@ -54,7 +54,7 @@ Representation:
 6. Network Delay Time - [LC-743](https://leetcode.com/problems/network-delay-time)
 7. Number of ways to arrive at destination
 8. Minimum steps to reach end from start by performing multiplication and mod operations with array elements
-8. 
+8. `IMPORTANT`Minimum Cost Walk in Weighted Graph [LC-3108](https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/) `Hard`  &#9989;  🧠;
 
 
 ### MST
