@@ -24,6 +24,15 @@ public class CountGoodNumbers {
         82, 83, 85, 87
 
         FIX:  digitString = String.format("%0" + n + "d", num); // Ensure correct length with leading zeros
+        OR,
+        for(long num = start; num <= end; num++) {
+            long temp = num;
+            for (int i = (int) n - 1; i >= 0; i--) { // extract digits from the end
+                int digit = (int) (temp % 10);
+                temp /= 10;
+            }
+        }
+
 
      */
     public int countGoodNumbers__bruteforce(long n) {
