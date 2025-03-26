@@ -8,10 +8,51 @@ public class Permutations1__Array {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
+
         //backtrackV1(nums, new ArrayList<>(), result, new HashSet<>());
-        backtrackV2(nums, 0, result);
+        backtrackV1_booleanArrayAsSet(nums, new ArrayList<>(), result, new boolean[nums.length]);
+        //backtrackV2(nums, 0, result);
         return result;
     }
+
+
+    private void backtrackV1(int[] arr, List<Integer> current, List<List<Integer>> result, Set<Integer> used) {
+        if(current.size() == arr.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+
+        for(int i=0; i < arr.length; i++) {
+            if (used.contains(arr[i])) continue;
+
+            used.add(arr[i]);
+            current.add(arr[i]);
+            backtrackV1(arr,  current, result, used);
+
+            used.remove(arr[i]);
+            current.removeLast();
+        }
+    }
+
+    private void backtrackV1_booleanArrayAsSet(int[] arr, List<Integer> current, List<List<Integer>> result, boolean[] used) {
+        if (current.size() == arr.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+
+        for (int i=0; i< arr.length; i++) {
+            if (used[i]) continue;
+
+            used[i] = true;
+            current.add(arr[i]);
+            backtrackV1_booleanArrayAsSet(arr, current, result, used);
+
+            used[i] = false;
+            current.removeLast();
+        }
+    }
+
+
 
     // Recursion with swapping:
     private void backtrackV2(int[] arr, int index, List<List<Integer>> result) {
@@ -28,28 +69,24 @@ public class Permutations1__Array {
         }
     }
 
-    private void backtrackV1(int[] arr, List<Integer> current, List<List<Integer>> result, Set<Integer> used) {
-        if(current.size() == arr.length) {
-            result.add(new ArrayList<>(current));
-            return;
-        }
-
-        for(int i=0; i < arr.length; i++) {
-            if(!used.contains(arr[i])) {
-                used.add(arr[i]);
-
-                current.add(arr[i]);
-                backtrackV1(arr,  current, result, used);
-                current.removeLast();
-                used.remove(arr[i]);
-            }
-        }
-    }
-
     private void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        Permutations1__Array solution = new Permutations1__Array();
+        int[][] inputs = new int[][]{
+                {1,2,3}, // [1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]
+                {0,1},   // [[0,1],[1,0]]
+                {1},      // [[1]]
+                {1,1,2}   // [[1]]
+        };
+
+        for (int[] nums : inputs) {
+            System.out.println(solution.permute(nums));
+        }
     }
 
 }

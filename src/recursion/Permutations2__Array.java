@@ -26,7 +26,7 @@ public class Permutations2__Array {
             backtrackV1(arr, current, result, used);
 
             used[i] = false;
-            current.remove(current.size() - 1);
+            current.removeLast();
         }
     }
 
