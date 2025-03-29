@@ -32,7 +32,7 @@
 | Combination Sum                                                   | [LC-39](https://leetcode.com/problems/combination-sum/)                                                                                                                                      |
 | Combination Sum II                                                | [LC-40](https://leetcode.com/problems/combination-sum-ii/)                                                                                                                                   |
 | Combination Sum III                                               | [LC-216](https://leetcode.com/problems/combination-sum-iii/)                                                                                                                                 |
-| **Combination Sum IV**  `Google`    ✅ ✋                           | [LC-377](https://leetcode.com/problems/combination-sum-iv/description/)                                                                                                                      |
+| **Combination Sum IV**  `Google`    ✅ ✋                           | [LC-377](https://leetcode.com/problems/combination-sum-iv/)                                                                                                                      |
 | Subset Sum-I                                                      | [GFG](https://www.geeksforgeeks.org/problems/subset-sums2234/1)                                                                                                                              |
 | Letter Tile Possibilities   ✅ `Subsets + Permutation`             | [LC-1079](https://leetcode.com/problems/letter-tile-possibilities/)         ✅ ✋                                                                                                              |
 | **Letter Combinations of a Phone number**                         | [LC-17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)                                                                                                                |
@@ -56,4 +56,8 @@
 
 
 ## Practice Problems
-1. 
+1. Kth Permutation Sequence [[LC-60]](https://leetcode.com/problems/permutation-sequence/) `Hard`
+2. Combination Sum IV &nbsp; [[LC-377]](https://leetcode.com/problems/combination-sum-iv/)
+3. Letter Case Permutation [[LC-784]](https://leetcode.com/problems/letter-case-permutation/)
+4. Number of Subsequences That Satisfy the Given Sum Condition [[LC-1498]](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) `TLE` `Sliding Window`
+5. 
