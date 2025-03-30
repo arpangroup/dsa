@@ -1,3 +1,4 @@
+
 ## Recursion:
 
 | PROBLEM                                                           | PRACTICE                                                                                                                                                                                     |
@@ -16,7 +17,7 @@
 | Sort a stack using recursion                                      | [GFG](https://www.geeksforgeeks.org/problems/sort-a-stack/1/)                                                                                                                                |
 | Reverse a stack using recursion                                   | [GFG](https://www.geeksforgeeks.org/problems/reverse-a-stack/1)                                                                                                                              |
 | **Pow(x, n)**                                                     | [LC-50](https://leetcode.com/problems/powx-n/)                                                                                                                                               |
-| **Count Good numbers**                                            | [LC-1922](https://leetcode.com/problems/count-good-numbers/)                                                                                                                                 |
+| [Count Good numbers]                                              | [LC-1922](https://leetcode.com/problems/count-good-numbers/)                                                                                                                                 |
 | **Generate Parentheses**                                          | [LC-22](https://leetcode.com/problems/generate-parentheses/)                                                                                                                                 |
 | **Power Set / Subset / Subsequences**                             | [LC-78](https://leetcode.com/problems/subsets/)                                                                                                                                              |
 | The Number of Beautiful Subsets  ✅ ✋                              | [LC-2597](https://leetcode.com/problems/the-number-of-beautiful-subsets/description/)                                                                                                        |
@@ -57,7 +58,9 @@
 
 ## Practice Problems
 1. Kth Permutation Sequence [[LC-60]](https://leetcode.com/problems/permutation-sequence/) `Hard`
-2. Combination Sum IV &nbsp; [[LC-377]](https://leetcode.com/problems/combination-sum-iv/)
-3. Letter Case Permutation [[LC-784]](https://leetcode.com/problems/letter-case-permutation/)
-4. Number of Subsequences That Satisfy the Given Sum Condition [[LC-1498]](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) `TLE` `Sliding Window`
-5. 
+2. Number of Beautiful Subsets [[LC-2597]](https://leetcode.com/problems/the-number-of-beautiful-subsets/)
+3. Letter Tile Possibilities [[LC-1079]](https://leetcode.com/problems/letter-tile-possibilities/)
+4. Combination Sum IV &nbsp; [[LC-377]](https://leetcode.com/problems/combination-sum-iv/)
+5. Letter Case Permutation [[LC-784]](https://leetcode.com/problems/letter-case-permutation/)
+6. Number of Subsequences That Satisfy the Given Sum Condition [[LC-1498]](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) `TLE` `Sliding Window`
+7. 

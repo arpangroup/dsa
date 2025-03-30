@@ -1,5 +1,10 @@
 package recursion;
 
+/*
+    Company Tags                :
+    LeetCode                    : 50
+    Leetcode Link               : https://leetcode.com/problems/powx-n/
+*/
 public class Power {
     private static final double mod = 1e9; //1000000007
 
