@@ -1,6 +1,6 @@
 package recursion;
 
-public class Recursion_05_BinarySearch {
+public class BinarySearch {
     public int binarySearch(int[] arr, int left, int right, int x) {
         if (left > right) return -1;
         int mid = (left + right) / 2;
@@ -13,7 +13,7 @@ public class Recursion_05_BinarySearch {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 5, 7, 8, 9, 12, 15};
         int search = 5;
-        var result = new Recursion_05_BinarySearch().binarySearch(arr, 0, arr.length-1, search);
+        var result = new BinarySearch().binarySearch(arr, 0, arr.length-1, search);
         System.out.println("FOUND: " + result);
     }
 }

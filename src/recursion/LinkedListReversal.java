@@ -1,6 +1,6 @@
 package recursion;
 
-public class Recursion_07_LinkedListReversal {
+public class LinkedListReversal {
     static class Node {
         public int data;
         public Node next;

@@ -3,7 +3,7 @@ package recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Recursion_01_PrintN {
+public class Print_1_To_N {
 
     public void printNumbersAsc(int n) { // 1, 2, 3, 4, 5
         if(n < 1) return;
@@ -34,7 +34,7 @@ public class Recursion_01_PrintN {
 //        new PrintN().printNumbersAsc(5);
 
         List<Integer> list = new ArrayList<>();
-        new Recursion_01_PrintN().getNumbersDec(5, list);
+        new Print_1_To_N().getNumbersDec(5, list);
         System.out.println(list);
     }
 }

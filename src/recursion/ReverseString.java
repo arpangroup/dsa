@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Arrays;
 
-public class Recursion_02_ReverseString {
+public class ReverseString {
     /* Approach1: Return result from recursive function */
     public String reverse(String input) {
         if (input.equals("")) return "";
@@ -43,7 +43,7 @@ public class Recursion_02_ReverseString {
         System.out.println(result.value);*/
 
         int[] arr = new int[]{1, 2, 3, 4, 5};
-        new Recursion_02_ReverseString().reverse(arr, 0, arr.length-1);
+        new ReverseString().reverse(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
 
 

@@ -1,6 +1,6 @@
 package recursion;
 
-public class Recursion_03_Palindrome {
+public class Palindrome {
     boolean isPalindrome(String str) {
         if (str.length() == 0 || str.length() == 1) return true;
 
@@ -11,7 +11,7 @@ public class Recursion_03_Palindrome {
     }
 
     public static void main(String[] args) {
-        boolean result = new Recursion_03_Palindrome().isPalindrome("dad");
+        boolean result = new Palindrome().isPalindrome("dad");
         System.out.println("isPalindrome: " + result);
     }
 }

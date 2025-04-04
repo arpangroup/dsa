@@ -1,6 +1,6 @@
 package recursion;
 
-public class Recursion_04_DecimalToBinary {
+public class DecimalToBinary {
     public String decimalToBinary(int decimal, String rem) {
         if (decimal == 0) return rem;
 
@@ -10,7 +10,7 @@ public class Recursion_04_DecimalToBinary {
 
 
     public static void main(String[] args) {
-        String binary = new Recursion_04_DecimalToBinary().decimalToBinary(257, "");
+        String binary = new DecimalToBinary().decimalToBinary(257, "");
         System.out.println("Binary: " + binary);
     }
 }
