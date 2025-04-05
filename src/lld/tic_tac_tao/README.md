@@ -1,7 +1,8 @@
-# Design Tic Tac Toe Game
+# Design Tic Tac Toe Game 🎲
 Tic Tac Toe, known colloquially as "Xs and Os," is a two-player game typically played on a 3x3 grid. The objective is simple: be the first to form a horizontal, vertical, or diagonal line of three of your marks (either "X" or "O"). The elegance of the game lies in its deceptive complexity, while the rules are straightforward, devising an unbeatable strategy demands a keen understanding of the game's dynamics.
 
 - https://codewitharyan.com/tech-blogs/design-tic-tac-toe-game
+- [YouTube](https://youtu.be/0-TIqvK6sh8?si=2Ubiz8WVHoNao9I5)
 
 ## Rules of the game : 
 Firstly let's understand the rules of the game:
