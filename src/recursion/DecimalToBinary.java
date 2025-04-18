@@ -33,11 +33,13 @@ public class DecimalToBinary {
             n = n / -2;
 
             // To ensure the remainder is non-negative, you need to adjust n and the remainder when rem < 0
+            // Why +2?
+            // Let's say: You get rem = -1
+            // If you add 2 → rem = 1 ✅ valid digit (either 0 or 1)
             if (rem < 0) {
                 rem += 2; // Adjusting the remainder into the valid range (0 or 1) by adding 2 → rem += 2
                 n += 1; // But now we've increased the "total value" by 2, so we must compensate for it in the quotient by increasing n → n += 1
             }
-
             sb.append(rem);
         }
         return sb.reverse().toString();
@@ -48,8 +50,8 @@ public class DecimalToBinary {
 //        String binary = new DecimalToBinary().decimalToBinary(2, "");
 //        System.out.println("Binary: " + binary);
 
-        System.out.println(new DecimalToBinary().base2(5));
+        System.out.println(new DecimalToBinary().baseNeg2(5));
 
-        System.out.println(-1 % -2);
+        System.out.println(3 % (-2));
     }
 }

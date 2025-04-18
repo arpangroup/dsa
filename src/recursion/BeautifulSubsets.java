@@ -6,14 +6,18 @@ import java.util.*;
 
 /*
     Company Tags                :
-    LeetCode                    : 131
-    Leetcode Link               : https://leetcode.com/problems/palindrome-partitioning/
+    LeetCode                    : 2597
+    Leetcode Link               : https://leetcode.com/problems/the-number-of-beautiful-subsets/
     Description: A subset of nums is beautiful if it does not contain two integers with an absolute difference equal to k.
+    Input: nums = [2,4,6], k = 2
+    Output: 4
+    Explanation: The beautiful subsets of the array nums are: [2], [4], [6], [2, 6].
+    It can be proved that there are only 4 beautiful subsets in the array [2,4,6].
 */
-public class BeautifulSubsets {
+    public class BeautifulSubsets {
     public int beautifulSubsets(int[] nums, int k) {
         MutableInteger count = new MutableInteger(0);
-        //backtrackV1(nums, 0, k, new HashSet<>(), count); // TC: O(2 ^ n); SC: O(n) <== Not work for Duplicate
+//        backtrackV1(nums, 0, k, new HashSet<>(), count); // TC: O(2 ^ n); SC: O(n) <== Not work for Duplicate
         backtrackV2(nums, 0, k, new HashMap<>(), count);
         return count.value;
     }
@@ -59,9 +63,6 @@ public class BeautifulSubsets {
             return;
         }
 
-        // Not take current element
-        // IMPORTANT: "not take" before the "take" case to ensure correct counting.
-        backtrackV1(arr, idx + 1, k, subsets, count);
 
         // Take current element if it maintains the beauty condition
         if (!subsets.contains(arr[idx] + k) && !subsets.contains(arr[idx] - k)) {
@@ -70,11 +71,16 @@ public class BeautifulSubsets {
             subsets.remove(arr[idx]);  // Backtrack (important step)
         }
 
+        // Not take current element
+        // IMPORTANT: "not take" before the "take" case to ensure correct counting.
+        backtrackV1(arr, idx + 1, k, subsets, count);
+
     }
 
     private void backtrackV2(int[] arr, int idx, int k, Map<Integer, Integer> map, MutableInteger count) {
         if (idx == arr.length) {
             if (!map.isEmpty()) { // Empty subset should not be counted
+                System.out.println(map.entrySet());
                 count.value += 1;
             }
             return;
@@ -102,6 +108,6 @@ public class BeautifulSubsets {
         System.out.println(solution.beautifulSubsets(new int[]{10,4,5,7,2,1}, 3)); // 23
         System.out.println(solution.beautifulSubsets(new int[]{1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000}, 1)); // 262143
         System.out.println(solution.beautifulSubsets(new int[]{18,12,10,5,6,2,18,3}, 8)); // 143 <== Duplicate
-        System.out.println(solution.beautifulSubsets(new int[]{2, 4, 4, 6}, 2));
+        System.out.println(solution.beautifulSubsets(new int[]{2, 4, 4, 6}, 2)); // 6
     }
 }
