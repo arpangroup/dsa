@@ -1,5 +1,7 @@
 package recursion;
 
+import java.util.*;
+
 /*
 
     Company Tags                :
@@ -14,12 +16,48 @@ package recursion;
     Explanation: The possible sequences are "A", "B", "AA", "AB", "BA", "AAB", "ABA", "BAA".
 */
 public class LetterTilePossibilities {
+    int count = 0;
+
     public int numTilePossibilities(String tiles) {
-        return 0;
+        /*
+        Set<String> result = new HashSet<>();
+        boolean[] used = new boolean[tiles.length()];
+        backtrack(tiles, used, "", result);
+        return result.size() - 1; // ignore empty string
+        */
+
+        int[] freq = new int[26];
+        for (char ch : tiles.toCharArray()) {
+            int pos = ch - 'A';
+            freq[pos]++;
+        }
+        backtrackV1(freq);
+        return count - 1; // Don't Count this non-empty sequence
     }
 
-    private void backtrack(String tiles) {
-        
+    private void backtrackV1(int[] freq) {
+        count ++;
+
+        for(int i=0; i < 26; i++) {
+            if(freq[i] == 0) continue;
+
+            freq[i]--;
+            backtrackV1(freq);
+            freq[i]++;
+        }
+    }
+
+    private void backtrack(String tiles, boolean[] used, String curr, Set<String> result) {
+        result.add(curr);
+
+        for(int i=0; i< tiles.length(); i++) {
+            if(used[i]) continue;
+
+            used[i] = true;
+            backtrack(tiles, used, curr + tiles.charAt(i), result);
+
+            used[i] = false;
+        }
     }
 
     public static void main(String[] args) {
